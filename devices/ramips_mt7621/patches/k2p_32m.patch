@@ -1,8 +1,8 @@
 diff --git a/target/linux/ramips/dts/mt7621_phicomm_k2p.dts b/target/linux/ramips/dts/mt7621_phicomm_k2p.dtsi
-similarity index 95%
+similarity index 94%
 rename from target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 rename to target/linux/ramips/dts/mt7621_phicomm_k2p.dtsi
-index b18d12608acc7..90276be6156aa 100644
+index b18d12608acc7..8f72ac2a48280 100644
 --- a/target/linux/ramips/dts/mt7621_phicomm_k2p.dts
 +++ b/target/linux/ramips/dts/mt7621_phicomm_k2p.dtsi
 @@ -4,9 +4,6 @@
@@ -15,6 +15,15 @@ index b18d12608acc7..90276be6156aa 100644
  	aliases {
  		led-boot = &led_blue;
  		led-failsafe = &led_blue;
+@@ -47,7 +44,7 @@
+ &spi0 {
+ 	status = "okay";
+ 
+-	flash@0 {
++	flash: flash@0 {
+ 		compatible = "jedec,spi-nor";
+ 		reg = <0>;
+ 		spi-max-frequency = <50000000>;
 @@ -81,10 +78,9 @@
  				read-only;
  			};
