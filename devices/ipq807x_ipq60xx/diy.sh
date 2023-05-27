@@ -14,6 +14,8 @@ rm -rf package/feeds
 ./scripts/feeds install -a -p kiddin9 -f
 ./scripts/feeds install -a
 
+sed -i "/CONFIG_KERNEL_/d" devices/common/.config
+
 echo "
 CONFIG_FEED_gl_feeds_common=n
 CONFIG_FEED_ipq807x=n
